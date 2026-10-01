@@ -16,6 +16,8 @@
   --color-border: #e2e8f0;
   --color-bg: #f8fafc;
   --color-icon-bg: #dbeafe;
+  --color-sand: #f3e8da;
+  --color-slate: #344256;
   --color-white: #ffffff;
 
   --font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
@@ -213,6 +215,59 @@ button { font: inherit; cursor: pointer; }
 }
 .btn:hover { opacity: 0.92; }
 .btn:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
+
+/* ---- Key endorsement (NDTA) ---- */
+.key-endorsement {
+  background: var(--color-sand);
+  padding-block: 48px;
+}
+.key-endorsement__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.key-endorsement__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.key-endorsement__heading .eyebrow { font-size: 11px; }
+.key-endorsement__heading h2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--color-navy);
+  text-wrap: balance;
+}
+.key-endorsement__figure {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.key-endorsement__media {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.45);
+}
+.key-endorsement__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 768;
+  object-fit: contain;
+}
+.key-endorsement__caption {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-slate);
+  text-align: center;
+}
 
 /* ---- About ---- */
 .about {
@@ -482,6 +537,18 @@ button { font: inherit; cursor: pointer; }
     border: 2px solid var(--color-border);
     border-radius: 12px;
   }
+
+  .key-endorsement { padding-block: 80px; }
+  .key-endorsement__inner { gap: 32px; }
+  .key-endorsement__heading { gap: 10px; }
+  .key-endorsement__heading .eyebrow { font-size: 13px; }
+  .key-endorsement__heading h2 { font-size: 32px; }
+  .key-endorsement__figure { gap: 32px; }
+  .key-endorsement__media {
+    border-radius: 16px;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.45);
+  }
+  .key-endorsement__caption { font-size: 15px; max-width: 640px; }
 
   .about { padding-block: 112px; }
   .about__inner {
